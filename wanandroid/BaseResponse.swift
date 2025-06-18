@@ -11,4 +11,5 @@ import Foundation
 struct BaseResponse<T: Decodable>: Decodable {
     let errorCode: Int
     let data: T?
+    let errorMsg:String = ""
 }

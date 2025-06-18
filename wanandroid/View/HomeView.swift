@@ -9,7 +9,7 @@ import SwiftUI
 import NukeUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @StateObject var viewModel = HomeViewModel()
     @State private var currentIndex = 0
 
     let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
@@ -33,30 +33,16 @@ struct HomeView: View {
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
                 .onReceive(timer) { _ in
                     guard !viewModel.bannerList.isEmpty else { return }
-               
-                      DispatchQueue.main.async {
-                          withAnimation(.easeInOut) {
-                              currentIndex = (currentIndex + 1) % viewModel.bannerList.count
-                          }
-                  }
-                }
-                // 文章
-                List {
-                    ForEach(viewModel.artcileList,id: \.id) { article in
-                        VStack(alignment: .leading) {
-                             Text(article.title)
-                                 .font(.headline)
-                         }
-                    }
-                    if !viewModel.isOver {
-                        Text("加载中...").onAppear {
-                            viewModel.fetchHomeActicle()
+                    
+                    DispatchQueue.main.async {
+                        withAnimation(.easeInOut) {
+                            currentIndex = (currentIndex + 1) % viewModel.bannerList.count
                         }
                     }
-                        
-
                 }
-            }.navigationTitle("首页")
+                // 文章
+                ArticleView(articleType: ArticleType.HOME)
+            }
         }
         .onAppear {
             viewModel.fetchBannel()

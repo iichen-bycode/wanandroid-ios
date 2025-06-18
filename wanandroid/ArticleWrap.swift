@@ -29,8 +29,8 @@ struct ArticleWrap: Codable {
         let canEdit: Bool
         let chapterID: Int?
         let chapterName: String?
-        let collect: Bool
-        let courseID: Int?  
+        var collect: Bool
+        let courseID: Int?
         let desc, descMd, envelopePic: String?
         let fresh: Bool
         let host: String?

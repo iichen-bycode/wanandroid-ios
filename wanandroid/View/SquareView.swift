@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SquareView: View {
     var body: some View {
-        Text("SquareView")
+        ArticleView(articleType: ArticleType.SQUARE)
     }
 }
 

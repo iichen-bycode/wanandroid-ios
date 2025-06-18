@@ -7,27 +7,66 @@
 
 import Foundation
 
-class CommonViewModel: ObservableObject {
+class ArticleViewModel: ObservableObject {
+    @Published var error:Error?
+    @Published var artcileList = [ArticleWrap.Article]()
+    var isOver:Bool = false;
+    private var page:Int = 0;
     
-    func doCollect(id: String) {
-        AFViewModel.shared.request(url: "\(Constant.BASE_URL)/lg/collect/\(id)/json",method: .post) { (result: Result<String,Error>) in
+    func fetchActicle(articleType: ArticleType,isRefresh: Bool = false) {
+        if(isRefresh) {
+            page = 0
+        }
+        if(isOver && !isRefresh) {
+            return
+        }
+        AFViewModel.shared.request(url: getUrl(articleType: articleType)) { (result: Result<ArticleWrap?, Error>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let articleWrap):
+                    if let articleWrap = articleWrap {
+                        self.isOver = articleWrap.over
+                        self.page = self.page + 1
+                        if isRefresh {
+                            self.artcileList.removeAll()
+                        }
+                        self.artcileList.append(contentsOf: articleWrap.datas)
+                    }
+                case .failure(let error):
+                    self.error = error
+                }
+            }
+        }
+    }
+    
+    func toggleCollect(article: ArticleWrap.Article) {
+
+
+        let isNowCollected = !article.collect
+        let url = isNowCollected
+        ? "\(Constant.BASE_URL)/lg/collect/\(article.id)/json"
+        : "\(Constant.BASE_URL)/lg/uncollect_originId/\(article.id)/json"
+        
+        AFViewModel.shared.request(url: url,method: .post) { (result: Result<String?,Error>) in
             switch result {
-            case .success(let r):
-                print(">>>>>>  收藏结果 \(r)")
+            case .success(_):
+                DispatchQueue.main.async {
+                    guard let index = self.artcileList.firstIndex(where: { $0.id == article.id }) else { return }
+                    self.artcileList[index].collect = isNowCollected
+                }
             case .failure(let error):
+                print("收藏失败：\(error)")
                 return
             }
         }
     }
     
-    func doUnCollect(id: String) {
-        AFViewModel.shared.request(url: "\(Constant.BASE_URL)/lg/uncollect_originId/\(id)/json",method: .post) { (result: Result<String,Error>) in
-            switch result {
-            case .success(let r):
-                print(">>>>>>  收藏结果 \(r)")
-            case .failure(let error):
-                return
-            }
+    func getUrl(articleType:ArticleType) -> String {
+        switch articleType {
+        case ArticleType.HOME:
+            return "\(Constant.BASE_URL)/article/list/\(page)/json"
+        case ArticleType.SQUARE:
+            return "\(Constant.BASE_URL)/user_article/list/\(page)/json"
         }
     }
 }

@@ -9,5 +9,9 @@ import Foundation
 class Constant {
     static let BASE_URL = "https://www.wanandroid.com"
     static let BANNER = "\(BASE_URL)/banner/json"
+    static let LOGIN = "\(BASE_URL)/user/login"
+    static let LOGINOUT = "\(BASE_URL)/user/logout/json"
+    static let REGISTER = "\(BASE_URL)/user/register"
+    static let USERINFO = "\(BASE_URL)/user/lg/userinfo/json"
 }
 

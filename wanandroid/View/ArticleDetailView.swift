@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct ArticleDetailView: View {
+    let article: ArticleWrap.Article
+    @State private var progress: Double = 0
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0) {
+            if progress < 1 {
+                ProgressView(value: progress)
+                    .progressViewStyle(LinearProgressViewStyle())
+                    .frame(height: 2)
+                    .animation(.easeInOut, value: progress)
+            }
+            
+            WebView(url: URL(string: article.link ?? "")!, progress: $progress)
+        }
+        .navigationTitle(article.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-#Preview {
-    ArticleDetailView()
-}
+//#Preview {
+//    ArticleDetailView(article: ArticleWrap.Article(ur))
+//}
