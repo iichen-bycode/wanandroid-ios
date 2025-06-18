@@ -33,16 +33,11 @@ struct ContentView: View {
                             Image(systemName: "message.fill") // 公众号图标
                             Text("公众号")
                         }.tag(2)
-                    SystemView()
-                        .tabItem {
-                            Image(systemName: "rectangle.stack.fill") // 体系图标
-                            Text("体系")
-                        }.tag(3)
                     ProjectView()
                         .tabItem {
                             Image(systemName: "hammer.fill") // 项目图标
                             Text("项目")
-                        }.tag(4)
+                        }.tag(3)
                 }.navigationDestination(isPresented: $afViewModel.shouldShowLogin) {
                     LoginView()
                 }.navigationBarTitle(buildBarTitle(),displayMode: .inline)
@@ -62,8 +57,7 @@ struct ContentView: View {
         case 0: return "首页"
         case 1: return "广场"
         case 2: return "公众号"
-        case 3: return "体系"
-        case 4: return "项目"
+        case 3: return "项目"
         default: return ""
         }
     }

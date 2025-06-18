@@ -23,6 +23,8 @@ extension Encodable {
 enum ArticleType {
     case HOME
     case SQUARE
+    case WECHAT
+    case PROJECT
 }
 
 

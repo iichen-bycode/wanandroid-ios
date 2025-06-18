@@ -17,7 +17,6 @@
 		A08FDA932DFBF3F300945834 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA922DFBF3F300945834 /* HomeView.swift */; };
 		A08FDA952DFBF66500945834 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA942DFBF66500945834 /* SquareView.swift */; };
 		A08FDA972DFBF6A700945834 /* WeChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA962DFBF6A700945834 /* WeChatView.swift */; };
-		A08FDA992DFBF6B700945834 /* SystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA982DFBF6B700945834 /* SystemView.swift */; };
 		A08FDA9B2DFBF6CC00945834 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA9A2DFBF6CC00945834 /* ProjectView.swift */; };
 		A08FDA9D2DFBFC3900945834 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA9C2DFBFC3900945834 /* HomeViewModel.swift */; };
 		A08FDAA12DFBFCEB00945834 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDAA02DFBFCEB00945834 /* Constant.swift */; };
@@ -39,6 +38,9 @@
 		A091A73A2E0158800047330C /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7392E0158800047330C /* ArticleDetailView.swift */; };
 		A091A73C2E01589A0047330C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A73B2E01589A0047330C /* WebView.swift */; };
 		A091A73E2E0168110047330C /* SlideOutMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A73D2E0168110047330C /* SlideOutMenu.swift */; };
+		A091A7402E02A5C70047330C /* WechatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A73F2E02A5C70047330C /* WechatViewModel.swift */; };
+		A091A7422E02A6B60047330C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7412E02A6B60047330C /* CategoryModel.swift */; };
+		A091A7442E02B83D0047330C /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7432E02B83D0047330C /* ProjectViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +74,6 @@
 		A08FDA922DFBF3F300945834 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A08FDA942DFBF66500945834 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		A08FDA962DFBF6A700945834 /* WeChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatView.swift; sourceTree = "<group>"; };
-		A08FDA982DFBF6B700945834 /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
 		A08FDA9A2DFBF6CC00945834 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		A08FDA9C2DFBFC3900945834 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A08FDAA02DFBFCEB00945834 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -92,6 +93,9 @@
 		A091A7392E0158800047330C /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 		A091A73B2E01589A0047330C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		A091A73D2E0168110047330C /* SlideOutMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenu.swift; sourceTree = "<group>"; };
+		A091A73F2E02A5C70047330C /* WechatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatViewModel.swift; sourceTree = "<group>"; };
+		A091A7412E02A6B60047330C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		A091A7432E02B83D0047330C /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +194,6 @@
 				A08FDA922DFBF3F300945834 /* HomeView.swift */,
 				A08FDA942DFBF66500945834 /* SquareView.swift */,
 				A08FDA962DFBF6A700945834 /* WeChatView.swift */,
-				A08FDA982DFBF6B700945834 /* SystemView.swift */,
 				A08FDA9A2DFBF6CC00945834 /* ProjectView.swift */,
 				A091A7262E0003950047330C /* LoginView.swift */,
 				A091A7392E0158800047330C /* ArticleDetailView.swift */,
@@ -205,6 +208,8 @@
 				A08FDA9C2DFBFC3900945834 /* HomeViewModel.swift */,
 				A091A7222DFFF8EF0047330C /* AFViewModel.swift */,
 				A091A7242DFFFBD60047330C /* ArticleViewModel.swift */,
+				A091A73F2E02A5C70047330C /* WechatViewModel.swift */,
+				A091A7432E02B83D0047330C /* ProjectViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				A08FDAA62DFC048E00945834 /* ArticleWrap.swift */,
 				A08FDAAF2DFC2F0700945834 /* Banner.swift */,
 				A091A72C2E0016190047330C /* UserModel.swift */,
+				A091A7412E02A6B60047330C /* CategoryModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -404,14 +410,16 @@
 				A08FDA9D2DFBFC3900945834 /* HomeViewModel.swift in Sources */,
 				A08FDAB02DFC2F0700945834 /* Banner.swift in Sources */,
 				A091A73C2E01589A0047330C /* WebView.swift in Sources */,
+				A091A7402E02A5C70047330C /* WechatViewModel.swift in Sources */,
 				A091A7362E0027350047330C /* RegisterReq.swift in Sources */,
 				A091A73E2E0168110047330C /* SlideOutMenu.swift in Sources */,
-				A08FDA992DFBF6B700945834 /* SystemView.swift in Sources */,
 				A08FDA9B2DFBF6CC00945834 /* ProjectView.swift in Sources */,
 				A08FDA972DFBF6A700945834 /* WeChatView.swift in Sources */,
 				A091A7292E0010CD0047330C /* LoginViewModel.swift in Sources */,
 				A08FDAA72DFC048E00945834 /* ArticleWrap.swift in Sources */,
 				A08FDA952DFBF66500945834 /* SquareView.swift in Sources */,
+				A091A7422E02A6B60047330C /* CategoryModel.swift in Sources */,
+				A091A7442E02B83D0047330C /* ProjectViewModel.swift in Sources */,
 				A091A7322E00219C0047330C /* LoginReq.swift in Sources */,
 				A091A7342E0021B30047330C /* Extension.swift in Sources */,
 				A091A7232DFFF8EF0047330C /* AFViewModel.swift in Sources */,

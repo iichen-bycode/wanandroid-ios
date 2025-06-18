@@ -13,5 +13,7 @@ class Constant {
     static let LOGINOUT = "\(BASE_URL)/user/logout/json"
     static let REGISTER = "\(BASE_URL)/user/register"
     static let USERINFO = "\(BASE_URL)/user/lg/userinfo/json"
+    static let WECHAT_AUTHORS = "\(BASE_URL)/wxarticle/chapters/json"
+    static let PROJECT_CATEGORY = "\(BASE_URL)/project/tree/json"
 }
 

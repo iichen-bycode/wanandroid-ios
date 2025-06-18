@@ -11,10 +11,9 @@ struct ArticleView: View {
     let articleType: ArticleType
     @StateObject var viewModel = ArticleViewModel()
 
-    init(articleType: ArticleType) {
-        self.articleType = articleType
-    }
-
+   
+    // 公众号数据使用
+    var categoryId:Int = 0
     
     var body: some View {
         ScrollViewReader { proxy in
@@ -24,7 +23,7 @@ struct ArticleView: View {
                         NavigationLink(destination: ArticleDetailView(article: article)) {
                             VStack(alignment: .leading) {
                                 HStack(){
-                                    Text(article.shareUser ?? "")
+                                    Text(((article.shareUser?.isEmpty == false) ? article.shareUser! : article.author) ?? "")
                                     Spacer()
                                     Text(article.niceDate ?? "")
                                 }.font(Font.subheadline).foregroundColor(.gray)
@@ -48,12 +47,12 @@ struct ArticleView: View {
                     }
                     if !viewModel.isOver {
                         Text("加载中...").onAppear {
-                            viewModel.fetchActicle(articleType: self.articleType)
+                            viewModel.fetchActicle(articleType: self.articleType,categoryId: categoryId)
                         }
                     }
                 }.refreshable {
                     print(">>>> refresh")
-                    viewModel.fetchActicle(articleType: self.articleType,isRefresh: true)
+                    viewModel.fetchActicle(articleType: self.articleType,isRefresh: true,categoryId: categoryId)
                 }.listStyle(PlainListStyle())
                 if !viewModel.artcileList.isEmpty {
                     Button(action: {

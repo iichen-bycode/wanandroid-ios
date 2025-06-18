@@ -13,7 +13,10 @@ class ArticleViewModel: ObservableObject {
     var isOver:Bool = false;
     private var page:Int = 0;
     
-    func fetchActicle(articleType: ArticleType,isRefresh: Bool = false) {
+    private var categoryId:Int = 0
+    
+    func fetchActicle(articleType: ArticleType,isRefresh: Bool = false,categoryId:Int = 0) {
+        self.categoryId = categoryId
         if(isRefresh) {
             page = 0
         }
@@ -67,6 +70,10 @@ class ArticleViewModel: ObservableObject {
             return "\(Constant.BASE_URL)/article/list/\(page)/json"
         case ArticleType.SQUARE:
             return "\(Constant.BASE_URL)/user_article/list/\(page)/json"
+        case ArticleType.WECHAT:
+            return "\(Constant.BASE_URL)/wxarticle/list/\(categoryId)/\(page)/json"
+        case ArticleType.PROJECT:
+            return "\(Constant.BASE_URL)/project/list/\(page)/json?cid=\(categoryId)"
         }
     }
 }
