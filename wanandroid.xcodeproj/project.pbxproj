@@ -45,6 +45,9 @@
 		A091A7482E03E61B0047330C /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7472E03E61B0047330C /* ToastManager.swift */; };
 		A091A74A2E03E62B0047330C /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7492E03E62B0047330C /* AlertManager.swift */; };
 		A091A74D2E03E76C0047330C /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A74C2E03E76C0047330C /* ToastViewModifier.swift */; };
+		A091A74F2E03F0D60047330C /* RankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A74E2E03F0D60047330C /* RankViewModel.swift */; };
+		A091A7512E03F2ED0047330C /* RankWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7502E03F2ED0047330C /* RankWrap.swift */; };
+		A091A7532E040E190047330C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7522E040E190047330C /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		A091A7472E03E61B0047330C /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
 		A091A7492E03E62B0047330C /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		A091A74C2E03E76C0047330C /* ToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
+		A091A74E2E03F0D60047330C /* RankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewModel.swift; sourceTree = "<group>"; };
+		A091A7502E03F2ED0047330C /* RankWrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankWrap.swift; sourceTree = "<group>"; };
+		A091A7522E040E190047330C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,7 @@
 				A091A7242DFFFBD60047330C /* ArticleViewModel.swift */,
 				A091A73F2E02A5C70047330C /* WechatViewModel.swift */,
 				A091A7432E02B83D0047330C /* ProjectViewModel.swift */,
+				A091A74E2E03F0D60047330C /* RankViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 				A08FDAAF2DFC2F0700945834 /* Banner.swift */,
 				A091A72C2E0016190047330C /* UserModel.swift */,
 				A091A7412E02A6B60047330C /* CategoryModel.swift */,
+				A091A7502E03F2ED0047330C /* RankWrap.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 				A091A7372E0151960047330C /* AccountManager.swift */,
 				A091A7472E03E61B0047330C /* ToastManager.swift */,
 				A091A7492E03E62B0047330C /* AlertManager.swift */,
+				A091A7522E040E190047330C /* Router.swift */,
 			);
 			name = Utills;
 			sourceTree = "<group>";
@@ -426,12 +435,15 @@
 				A091A7382E0151960047330C /* AccountManager.swift in Sources */,
 				A08FDA932DFBF3F300945834 /* HomeView.swift in Sources */,
 				A01EEBA42DFBC8CB007A207C /* ContentView.swift in Sources */,
+				A091A74F2E03F0D60047330C /* RankViewModel.swift in Sources */,
 				A08FDAA12DFBFCEB00945834 /* Constant.swift in Sources */,
 				A01EEBA22DFBC8CB007A207C /* wanandroidApp.swift in Sources */,
 				A091A7252DFFFBD60047330C /* ArticleViewModel.swift in Sources */,
+				A091A7532E040E190047330C /* Router.swift in Sources */,
 				A08FDA9D2DFBFC3900945834 /* HomeViewModel.swift in Sources */,
 				A08FDAB02DFC2F0700945834 /* Banner.swift in Sources */,
 				A091A74D2E03E76C0047330C /* ToastViewModifier.swift in Sources */,
+				A091A7512E03F2ED0047330C /* RankWrap.swift in Sources */,
 				A091A73C2E01589A0047330C /* WebView.swift in Sources */,
 				A091A7402E02A5C70047330C /* WechatViewModel.swift in Sources */,
 				A091A7362E0027350047330C /* RegisterReq.swift in Sources */,

@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SquareView: View {
     var body: some View {
-        ArticleView(articleType: ArticleType.SQUARE)
+        VStack {
+            ArticleView(articleType: ArticleType.SQUARE)
+        }
     }
 }
 

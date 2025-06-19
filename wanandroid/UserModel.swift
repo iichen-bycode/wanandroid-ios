@@ -27,5 +27,6 @@ struct CoinInfo: Codable {
     let coinCount, level: Int?
     let nickname, rank: String?
     let userID: Int?
+    let userId: Int?
     let username: String?
 }

@@ -11,7 +11,6 @@ struct ArticleView: View {
     let articleType: ArticleType
     @StateObject var viewModel = ArticleViewModel()
 
-   
     // 公众号数据使用
     var categoryId:Int = 0
     

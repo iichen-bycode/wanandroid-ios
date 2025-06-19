@@ -11,9 +11,6 @@ import Alamofire
 class AFViewModel: ObservableObject {
     static let shared = AFViewModel()
     private init() {}
-    
-    /// 登录弹窗状态
-    @Published var shouldShowLogin: Bool = false
 
     /// 通用请求方法
     func request<T: Decodable>(
@@ -32,7 +29,7 @@ class AFViewModel: ObservableObject {
                     if baseResponse.errorCode == -1001 {
                         DispatchQueue.main.async {
                             print(">>>>>>需要登录<<<<<<")
-                            self.shouldShowLogin = true
+                            Router.share.push(.LOGIN)
                             if AccountManager.shared.isLoggedIn {
                                 AccountManager.shared.logout()
                                 print(">>>>>>登录失效<<<<<<")

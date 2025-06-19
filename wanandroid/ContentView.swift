@@ -14,9 +14,11 @@ struct ContentView: View {
     @State var menuWidth = UIScreen.main.bounds.width - 60
     @State var offsetX = -UIScreen.main.bounds.width + 60
     
+    @StateObject var router = Router.share
+    
     var body: some View {
         ZStack {
-            NavigationStack() {
+            NavigationStack(path: $router.path) {
                 TabView(selection: $selectedTab) {
                     HomeView()
                         .tabItem {
@@ -38,8 +40,13 @@ struct ContentView: View {
                             Image(systemName: "hammer.fill") // 项目图标
                             Text("项目")
                         }.tag(3)
-                }.navigationDestination(isPresented: $afViewModel.shouldShowLogin) {
-                    LoginView()
+                }.navigationDestination(for: Route.self) { route in
+                    switch route {
+                    case .LOGIN:
+                        LoginView()
+                    case .RANK:
+                        RankView()
+                    }
                 }.navigationBarTitle(buildBarTitle(),displayMode: .inline)
                 .navigationBarItems(leading: Image(systemName: "list.bullet").onTapGesture {
                     withAnimation {
