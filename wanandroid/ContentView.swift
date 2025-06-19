@@ -46,7 +46,9 @@ struct ContentView: View {
                         offsetX = 0
                     }
                 })
-                .navigationBarItems(trailing: selectedTab == 1 ? Image(systemName: "plus") : Image(systemName: "magnifyingglass"))
+                .navigationBarItems(trailing: (selectedTab == 1 ? Image(systemName: "plus") : Image(systemName: "magnifyingglass")).onTapGesture {
+                    ToastManager.share.toast("搜索")
+                })
             }
             SlideOutMenu(menuWidth: $menuWidth, offsetX: $offsetX)
         }

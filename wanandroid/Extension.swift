@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Encodable {
     func toDictionary() -> [String: Any]? {
@@ -17,6 +18,12 @@ extension Encodable {
             print("对象转字典失败: \(error)")
             return nil
         }
+    }
+}
+
+extension View {
+    func toast() -> some View {
+        self.modifier(ToastViewModifier())
     }
 }
 

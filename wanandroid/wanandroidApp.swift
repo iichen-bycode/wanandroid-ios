@@ -16,7 +16,7 @@ import SwiftUI
                     AccountManager.shared.loadUser()
                     print(">>>>>  是否登录 \(AccountManager.shared.isLoggedIn)")
                     loginViewModel.isLoggingIn = AccountManager.shared.isLoggedIn
-                }
+                }.toast()
             }
         }
     }

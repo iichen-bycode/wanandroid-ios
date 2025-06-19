@@ -41,6 +41,10 @@
 		A091A7402E02A5C70047330C /* WechatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A73F2E02A5C70047330C /* WechatViewModel.swift */; };
 		A091A7422E02A6B60047330C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7412E02A6B60047330C /* CategoryModel.swift */; };
 		A091A7442E02B83D0047330C /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7432E02B83D0047330C /* ProjectViewModel.swift */; };
+		A091A7462E02BB620047330C /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7452E02BB620047330C /* RankView.swift */; };
+		A091A7482E03E61B0047330C /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7472E03E61B0047330C /* ToastManager.swift */; };
+		A091A74A2E03E62B0047330C /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7492E03E62B0047330C /* AlertManager.swift */; };
+		A091A74D2E03E76C0047330C /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A74C2E03E76C0047330C /* ToastViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		A091A73F2E02A5C70047330C /* WechatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatViewModel.swift; sourceTree = "<group>"; };
 		A091A7412E02A6B60047330C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		A091A7432E02B83D0047330C /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		A091A7452E02BB620047330C /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
+		A091A7472E03E61B0047330C /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		A091A7492E03E62B0047330C /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		A091A74C2E03E76C0047330C /* ToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,7 @@
 		A01EEBA02DFBC8CB007A207C /* wanandroid */ = {
 			isa = PBXGroup;
 			children = (
+				A091A74B2E03E74E0047330C /* ext */,
 				A091A7302E00218F0047330C /* req */,
 				A08FDAB42DFFE52600945834 /* widget */,
 				A08FDA912DFBF38B00945834 /* Utills */,
@@ -197,6 +206,7 @@
 				A08FDA9A2DFBF6CC00945834 /* ProjectView.swift */,
 				A091A7262E0003950047330C /* LoginView.swift */,
 				A091A7392E0158800047330C /* ArticleDetailView.swift */,
+				A091A7452E02BB620047330C /* RankView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +242,8 @@
 			children = (
 				A091A7332E0021B30047330C /* Extension.swift */,
 				A091A7372E0151960047330C /* AccountManager.swift */,
+				A091A7472E03E61B0047330C /* ToastManager.swift */,
+				A091A7492E03E62B0047330C /* AlertManager.swift */,
 			);
 			name = Utills;
 			sourceTree = "<group>";
@@ -260,6 +272,14 @@
 				A091A7352E0027350047330C /* RegisterReq.swift */,
 			);
 			path = req;
+			sourceTree = "<group>";
+		};
+		A091A74B2E03E74E0047330C /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				A091A74C2E03E76C0047330C /* ToastViewModifier.swift */,
+			);
+			name = ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,7 +420,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A091A7462E02BB620047330C /* RankView.swift in Sources */,
 				A091A72D2E0016190047330C /* UserModel.swift in Sources */,
+				A091A74A2E03E62B0047330C /* AlertManager.swift in Sources */,
 				A091A7382E0151960047330C /* AccountManager.swift in Sources */,
 				A08FDA932DFBF3F300945834 /* HomeView.swift in Sources */,
 				A01EEBA42DFBC8CB007A207C /* ContentView.swift in Sources */,
@@ -409,6 +431,7 @@
 				A091A7252DFFFBD60047330C /* ArticleViewModel.swift in Sources */,
 				A08FDA9D2DFBFC3900945834 /* HomeViewModel.swift in Sources */,
 				A08FDAB02DFC2F0700945834 /* Banner.swift in Sources */,
+				A091A74D2E03E76C0047330C /* ToastViewModifier.swift in Sources */,
 				A091A73C2E01589A0047330C /* WebView.swift in Sources */,
 				A091A7402E02A5C70047330C /* WechatViewModel.swift in Sources */,
 				A091A7362E0027350047330C /* RegisterReq.swift in Sources */,
@@ -420,6 +443,7 @@
 				A08FDA952DFBF66500945834 /* SquareView.swift in Sources */,
 				A091A7422E02A6B60047330C /* CategoryModel.swift in Sources */,
 				A091A7442E02B83D0047330C /* ProjectViewModel.swift in Sources */,
+				A091A7482E03E61B0047330C /* ToastManager.swift in Sources */,
 				A091A7322E00219C0047330C /* LoginReq.swift in Sources */,
 				A091A7342E0021B30047330C /* Extension.swift in Sources */,
 				A091A7232DFFF8EF0047330C /* AFViewModel.swift in Sources */,

@@ -11,6 +11,8 @@ struct SlideOutMenu: View {
     @Binding var offsetX: CGFloat
     
     @EnvironmentObject var loginViewModel:LoginViewModel
+    
+    @State var isShowLogoutAlert = false
 
     var body: some View {
         Form {
@@ -31,18 +33,24 @@ struct SlideOutMenu: View {
                     Text("我的积分")
                     Spacer()
                     Image(systemName: "chevron.right")
+                }.contentShape(Rectangle()).onTapGesture {
+                    
                 }
                 HStack {
                     Image(systemName: "heart")
                     Text("我的收藏")
                     Spacer()
                     Image(systemName: "chevron.right")
+                }.contentShape(Rectangle()).onTapGesture {
+                    
                 }
                 HStack {
                     Image(systemName: "square.and.arrow.up")
                     Text("我的分享")
                     Spacer()
                     Image(systemName: "chevron.right")
+                }.contentShape(Rectangle()).onTapGesture {
+                                        
                 }
                 if loginViewModel.isLoggingIn {
                     HStack {
@@ -50,8 +58,8 @@ struct SlideOutMenu: View {
                         Text("退出登录")
                         Spacer()
                         Image(systemName: "chevron.right")
-                    }.onTapGesture {
-                        loginViewModel.doLoginOut()
+                    }.contentShape(Rectangle()).onTapGesture {
+                        isShowLogoutAlert = true
                     }
                 }
             }.padding()
@@ -65,6 +73,13 @@ struct SlideOutMenu: View {
             if(isLogin) {
                 loginViewModel.fetchUserInfo()
             }
+        }
+        .alert(isPresented: $isShowLogoutAlert) {
+            Alert(title: Text("提示"),message: Text("确定注销吗？"),primaryButton:.destructive(Text("确定"), action: {
+                loginViewModel.doLoginOut()
+            }),secondaryButton:.cancel(Text("取消")) {
+                isShowLogoutAlert = false
+            })
         }
         .background(
             Color.black.opacity(offsetX == 0 ? 0.5 : 0)

@@ -22,6 +22,7 @@ class LoginViewModel: ObservableObject {
                 case .success(let user):
                     completion()
                     print(">>>> 登录成功")
+                    ToastManager.share.toast("登录成功～")
                     self.isLoggingIn = true
                     if let user = user {
                         AccountManager.shared.saveUser(user)
@@ -41,6 +42,7 @@ class LoginViewModel: ObservableObject {
                 switch result {
                 case .success(_):
                     print(">>>> 注册成功")
+                    ToastManager.share.toast("注册成功～")
                     self.isRegisterStatus = false
                 case .failure(let error):
                     print(">>>>>>>loginViewModel \(error)")
@@ -55,6 +57,7 @@ class LoginViewModel: ObservableObject {
                 switch result {
                 case .success(_):
                     print(">>>> 注销成功")
+                    ToastManager.share.toast("注销成功～")
                     self.isLoggingIn = false
                     self.coinInfo = nil
                     AccountManager.shared.logout()
