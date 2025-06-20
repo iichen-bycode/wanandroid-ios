@@ -31,11 +31,11 @@ struct ArticleView: View {
                                     Text("\(article.superChapterName ?? "") / \(article.chapterName ?? "")")
                                         .font(Font.subheadline).foregroundColor(.gray)
                                     Spacer()
-                                    Image(systemName: article.collect ? "heart.fill" : "heart")
+                                    Image(systemName: (article.collect ?? true) ? "heart.fill" : "heart")
                                                         .resizable()
                                                         .scaledToFit()
                                                         .frame(width: 20, height: 20)
-                                                        .foregroundColor(article.collect ? .red : .gray)
+                                                        .foregroundColor((article.collect ?? true) ? .red : .gray)
                                                         .onTapGesture(perform: {
                                                             viewModel.toggleCollect(article: article)
                                                         })

@@ -32,6 +32,7 @@ enum ArticleType {
     case SQUARE
     case WECHAT
     case PROJECT
+    case COLLECT
 }
 
 

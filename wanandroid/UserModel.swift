@@ -29,4 +29,6 @@ struct CoinInfo: Codable {
     let userID: Int?
     let userId: Int?
     let username: String?
+    let desc: String?
+    let reason: String?
 }

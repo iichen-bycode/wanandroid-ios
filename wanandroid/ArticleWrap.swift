@@ -22,26 +22,26 @@ struct ArticleWrap: Codable {
     
 
     struct Article: Codable,Identifiable {
-        let adminAdd: Bool
+        let adminAdd: Bool?
         let apkLink: String?
         let audit: Int?
         let author: String?
-        let canEdit: Bool
+        let canEdit: Bool?
         let chapterID: Int?
         let chapterName: String?
-        var collect: Bool
+        var collect: Bool? = true
         let courseID: Int?
         let desc, descMd, envelopePic: String?
-        let fresh: Bool
+        let fresh: Bool? = false
         let host: String?
         let id: Int
-        let isAdminAdd: Bool
         let link: String?
         let niceDate, niceShareDate, origin, dataPrefix: String?
         let projectLink: String?
         let publishTime, realSuperChapterID, selfVisible, shareDate: Int?
         let shareUser: String?
         let superChapterID: Int?
+        let originId: Int?
         let superChapterName: String?
         let tags: [Tag]?
         let title: String

@@ -24,6 +24,7 @@ class AFViewModel: ObservableObject {
         AF.request(url, method: method, parameters: parameters, headers: headers)
             .validate()
             .responseDecodable(of: BaseResponse<T>.self) { response in
+//                print(">>>>>>>>请求 结果 \(response.result)")
                 switch response.result {
                 case .success(let baseResponse):
                     if baseResponse.errorCode == -1001 {

@@ -46,6 +46,10 @@ struct ContentView: View {
                         LoginView()
                     case .RANK:
                         RankView()
+                    case .COLLECT:
+                        CollectView()
+                    case .COIN:
+                        CoinDetailView()
                     }
                 }.navigationBarTitle(buildBarTitle(),displayMode: .inline)
                 .navigationBarItems(leading: Image(systemName: "list.bullet").onTapGesture {

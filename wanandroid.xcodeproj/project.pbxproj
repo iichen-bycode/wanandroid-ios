@@ -48,6 +48,9 @@
 		A091A74F2E03F0D60047330C /* RankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A74E2E03F0D60047330C /* RankViewModel.swift */; };
 		A091A7512E03F2ED0047330C /* RankWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7502E03F2ED0047330C /* RankWrap.swift */; };
 		A091A7532E040E190047330C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7522E040E190047330C /* Router.swift */; };
+		A091A7572E0532D40047330C /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7562E0532D40047330C /* CoinDetailView.swift */; };
+		A091A7592E0533290047330C /* CollectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7582E0533290047330C /* CollectView.swift */; };
+		A091A75B2E0533BE0047330C /* CoinDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A75A2E0533BE0047330C /* CoinDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		A091A74E2E03F0D60047330C /* RankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewModel.swift; sourceTree = "<group>"; };
 		A091A7502E03F2ED0047330C /* RankWrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankWrap.swift; sourceTree = "<group>"; };
 		A091A7522E040E190047330C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A091A7562E0532D40047330C /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
+		A091A7582E0533290047330C /* CollectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectView.swift; sourceTree = "<group>"; };
+		A091A75A2E0533BE0047330C /* CoinDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,8 @@
 				A091A7262E0003950047330C /* LoginView.swift */,
 				A091A7392E0158800047330C /* ArticleDetailView.swift */,
 				A091A7452E02BB620047330C /* RankView.swift */,
+				A091A7562E0532D40047330C /* CoinDetailView.swift */,
+				A091A7582E0533290047330C /* CollectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +235,7 @@
 				A091A73F2E02A5C70047330C /* WechatViewModel.swift */,
 				A091A7432E02B83D0047330C /* ProjectViewModel.swift */,
 				A091A74E2E03F0D60047330C /* RankViewModel.swift */,
+				A091A75A2E0533BE0047330C /* CoinDetailViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -434,14 +443,17 @@
 				A091A74A2E03E62B0047330C /* AlertManager.swift in Sources */,
 				A091A7382E0151960047330C /* AccountManager.swift in Sources */,
 				A08FDA932DFBF3F300945834 /* HomeView.swift in Sources */,
+				A091A7592E0533290047330C /* CollectView.swift in Sources */,
 				A01EEBA42DFBC8CB007A207C /* ContentView.swift in Sources */,
 				A091A74F2E03F0D60047330C /* RankViewModel.swift in Sources */,
 				A08FDAA12DFBFCEB00945834 /* Constant.swift in Sources */,
 				A01EEBA22DFBC8CB007A207C /* wanandroidApp.swift in Sources */,
+				A091A75B2E0533BE0047330C /* CoinDetailViewModel.swift in Sources */,
 				A091A7252DFFFBD60047330C /* ArticleViewModel.swift in Sources */,
 				A091A7532E040E190047330C /* Router.swift in Sources */,
 				A08FDA9D2DFBFC3900945834 /* HomeViewModel.swift in Sources */,
 				A08FDAB02DFC2F0700945834 /* Banner.swift in Sources */,
+				A091A7572E0532D40047330C /* CoinDetailView.swift in Sources */,
 				A091A74D2E03E76C0047330C /* ToastViewModifier.swift in Sources */,
 				A091A7512E03F2ED0047330C /* RankWrap.swift in Sources */,
 				A091A73C2E01589A0047330C /* WebView.swift in Sources */,

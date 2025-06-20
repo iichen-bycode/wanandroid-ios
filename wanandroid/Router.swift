@@ -37,4 +37,6 @@ class Router: ObservableObject {
 enum Route: Hashable {
     case LOGIN
     case RANK
+    case COLLECT
+    case COIN
 }
