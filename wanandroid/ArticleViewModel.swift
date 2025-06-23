@@ -14,18 +14,20 @@ class ArticleViewModel: ObservableObject {
     private var page:Int = 0;
     
     private var categoryId:Int = 0
+    private var searchKey:String = ""
     private var articleType:ArticleType = ArticleType.HOME
     
-    func fetchActicle(articleType: ArticleType,isRefresh: Bool = false,categoryId:Int = 0) {
+    func fetchActicle(articleType: ArticleType,isRefresh: Bool = false,categoryId:Int = 0,searchKey:String = "") {
         self.categoryId = categoryId
         self.articleType = articleType
+        self.searchKey = searchKey
         if(isRefresh) {
             page = 0
         }
         if(isOver && !isRefresh) {
             return
         }
-        AFViewModel.shared.request(url: getUrl(articleType: articleType)) { (result: Result<ArticleWrap?, Error>) in
+        AFViewModel.shared.request(url: getUrl(articleType: articleType),method:articleType == ArticleType.SEARCH ? .post : .get) { (result: Result<ArticleWrap?, Error>) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let articleWrap):
@@ -82,6 +84,8 @@ class ArticleViewModel: ObservableObject {
             return "\(Constant.BASE_URL)/project/list/\(page)/json?cid=\(categoryId)"
         case ArticleType.COLLECT:
             return "\(Constant.BASE_URL)/lg/collect/list/\(page)/json"
+        case ArticleType.SEARCH:
+            return "\(Constant.BASE_URL)/article/query/\(page)/json?k=\(searchKey)"
         }
     }
 }

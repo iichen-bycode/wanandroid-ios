@@ -33,6 +33,7 @@ enum ArticleType {
     case WECHAT
     case PROJECT
     case COLLECT
+    case SEARCH
 }
 
 

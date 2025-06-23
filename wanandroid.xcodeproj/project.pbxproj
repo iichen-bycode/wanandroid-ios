@@ -14,6 +14,7 @@
 		A01EEBB32DFBC8CE007A207C /* wanandroidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EEBB22DFBC8CE007A207C /* wanandroidTests.swift */; };
 		A01EEBBD2DFBC8CE007A207C /* wanandroidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EEBBC2DFBC8CE007A207C /* wanandroidUITests.swift */; };
 		A01EEBBF2DFBC8CE007A207C /* wanandroidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EEBBE2DFBC8CE007A207C /* wanandroidUITestsLaunchTests.swift */; };
+		A08BA60A2E093569008A215D /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = A08BA6092E093569008A215D /* Flow */; };
 		A08FDA932DFBF3F300945834 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA922DFBF3F300945834 /* HomeView.swift */; };
 		A08FDA952DFBF66500945834 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA942DFBF66500945834 /* SquareView.swift */; };
 		A08FDA972DFBF6A700945834 /* WeChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FDA962DFBF6A700945834 /* WeChatView.swift */; };
@@ -51,6 +52,10 @@
 		A091A7572E0532D40047330C /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7562E0532D40047330C /* CoinDetailView.swift */; };
 		A091A7592E0533290047330C /* CollectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7582E0533290047330C /* CollectView.swift */; };
 		A091A75B2E0533BE0047330C /* CoinDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A75A2E0533BE0047330C /* CoinDetailViewModel.swift */; };
+		A091A7612E05500E0047330C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7602E05500E0047330C /* SearchView.swift */; };
+		A091A7632E0550240047330C /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7622E0550240047330C /* SearchResultView.swift */; };
+		A091A7652E0550A20047330C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7642E0550A20047330C /* SearchViewModel.swift */; };
+		A091A7672E05565F0047330C /* SearchkeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A091A7662E05565F0047330C /* SearchkeyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +121,10 @@
 		A091A7562E0532D40047330C /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
 		A091A7582E0533290047330C /* CollectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectView.swift; sourceTree = "<group>"; };
 		A091A75A2E0533BE0047330C /* CoinDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewModel.swift; sourceTree = "<group>"; };
+		A091A7602E05500E0047330C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A091A7622E0550240047330C /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		A091A7642E0550A20047330C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A091A7662E05565F0047330C /* SearchkeyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchkeyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +134,7 @@
 			files = (
 				A08FDAAB2DFC09B700945834 /* Alamofire in Frameworks */,
 				A08FDAB32DFC30A700945834 /* NukeUI in Frameworks */,
+				A08BA60A2E093569008A215D /* Flow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +231,8 @@
 				A091A7452E02BB620047330C /* RankView.swift */,
 				A091A7562E0532D40047330C /* CoinDetailView.swift */,
 				A091A7582E0533290047330C /* CollectView.swift */,
+				A091A7602E05500E0047330C /* SearchView.swift */,
+				A091A7622E0550240047330C /* SearchResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 				A091A7432E02B83D0047330C /* ProjectViewModel.swift */,
 				A091A74E2E03F0D60047330C /* RankViewModel.swift */,
 				A091A75A2E0533BE0047330C /* CoinDetailViewModel.swift */,
+				A091A7642E0550A20047330C /* SearchViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -250,6 +263,7 @@
 				A091A72C2E0016190047330C /* UserModel.swift */,
 				A091A7412E02A6B60047330C /* CategoryModel.swift */,
 				A091A7502E03F2ED0047330C /* RankWrap.swift */,
+				A091A7662E05565F0047330C /* SearchkeyModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -319,6 +333,7 @@
 			packageProductDependencies = (
 				A08FDAAA2DFC09B700945834 /* Alamofire */,
 				A08FDAB22DFC30A700945834 /* NukeUI */,
+				A08BA6092E093569008A215D /* Flow */,
 			);
 			productName = wanandroid;
 			productReference = A01EEB9E2DFBC8CB007A207C /* wanandroid.app */;
@@ -395,6 +410,7 @@
 			packageReferences = (
 				A08FDAA82DFC08BF00945834 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A08FDAAC2DFC2E0500945834 /* XCRemoteSwiftPackageReference "Nuke" */,
+				A08BA6082E093569008A215D /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
 			);
 			productRefGroup = A01EEB9F2DFBC8CB007A207C /* Products */;
 			projectDirPath = "";
@@ -451,17 +467,21 @@
 				A091A75B2E0533BE0047330C /* CoinDetailViewModel.swift in Sources */,
 				A091A7252DFFFBD60047330C /* ArticleViewModel.swift in Sources */,
 				A091A7532E040E190047330C /* Router.swift in Sources */,
+				A091A7632E0550240047330C /* SearchResultView.swift in Sources */,
 				A08FDA9D2DFBFC3900945834 /* HomeViewModel.swift in Sources */,
 				A08FDAB02DFC2F0700945834 /* Banner.swift in Sources */,
 				A091A7572E0532D40047330C /* CoinDetailView.swift in Sources */,
 				A091A74D2E03E76C0047330C /* ToastViewModifier.swift in Sources */,
 				A091A7512E03F2ED0047330C /* RankWrap.swift in Sources */,
+				A091A7672E05565F0047330C /* SearchkeyModel.swift in Sources */,
 				A091A73C2E01589A0047330C /* WebView.swift in Sources */,
 				A091A7402E02A5C70047330C /* WechatViewModel.swift in Sources */,
+				A091A7612E05500E0047330C /* SearchView.swift in Sources */,
 				A091A7362E0027350047330C /* RegisterReq.swift in Sources */,
 				A091A73E2E0168110047330C /* SlideOutMenu.swift in Sources */,
 				A08FDA9B2DFBF6CC00945834 /* ProjectView.swift in Sources */,
 				A08FDA972DFBF6A700945834 /* WeChatView.swift in Sources */,
+				A091A7652E0550A20047330C /* SearchViewModel.swift in Sources */,
 				A091A7292E0010CD0047330C /* LoginViewModel.swift in Sources */,
 				A08FDAA72DFC048E00945834 /* ArticleWrap.swift in Sources */,
 				A08FDA952DFBF66500945834 /* SquareView.swift in Sources */,
@@ -806,6 +826,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A08BA6082E093569008A215D /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tevelee/SwiftUI-Flow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
 		A08FDAA82DFC08BF00945834 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -825,6 +853,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A08BA6092E093569008A215D /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A08BA6082E093569008A215D /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
 		A08FDAAA2DFC09B700945834 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A08FDAA82DFC08BF00945834 /* XCRemoteSwiftPackageReference "Alamofire" */;

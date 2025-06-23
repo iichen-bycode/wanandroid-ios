@@ -50,6 +50,10 @@ struct ContentView: View {
                         CollectView()
                     case .COIN:
                         CoinDetailView()
+                    case .SEARCH:
+                        SearchView()
+                    case .SEARCH_RESULT(let key):
+                        SearchResultView(key:key)
                     }
                 }.navigationBarTitle(buildBarTitle(),displayMode: .inline)
                 .navigationBarItems(leading: Image(systemName: "list.bullet").onTapGesture {
@@ -58,7 +62,8 @@ struct ContentView: View {
                     }
                 })
                 .navigationBarItems(trailing: (selectedTab == 1 ? Image(systemName: "plus") : Image(systemName: "magnifyingglass")).onTapGesture {
-                    ToastManager.share.toast("搜索")
+//                    ToastManager.share.toast("搜索")    
+                    Router.share.push(.SEARCH)
                 })
             }
             SlideOutMenu(menuWidth: $menuWidth, offsetX: $offsetX)

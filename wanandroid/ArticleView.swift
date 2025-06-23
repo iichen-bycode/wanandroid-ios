@@ -13,6 +13,7 @@ struct ArticleView: View {
 
     // 公众号数据使用
     var categoryId:Int = 0
+    var searchKey:String = ""
     
     var body: some View {
         ScrollViewReader { proxy in
@@ -46,12 +47,12 @@ struct ArticleView: View {
                     }
                     if !viewModel.isOver {
                         Text("加载中...").onAppear {
-                            viewModel.fetchActicle(articleType: self.articleType,categoryId: categoryId)
+                            viewModel.fetchActicle(articleType: self.articleType,categoryId: categoryId,searchKey:searchKey)
                         }
                     }
                 }.refreshable {
                     print(">>>> refresh")
-                    viewModel.fetchActicle(articleType: self.articleType,isRefresh: true,categoryId: categoryId)
+                    viewModel.fetchActicle(articleType: self.articleType,isRefresh: true,categoryId: categoryId,searchKey:searchKey)
                 }.listStyle(PlainListStyle())
                 if !viewModel.artcileList.isEmpty {
                     Button(action: {
@@ -76,5 +77,6 @@ struct ArticleView: View {
 }
 
 #Preview {
-    ArticleView(articleType: ArticleType.SQUARE)
+//    ArticleView(articleType: ArticleType.SQUARE)
+    ArticleView(articleType: ArticleType.SEARCH,searchKey: "自定义View")
 }

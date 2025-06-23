@@ -39,4 +39,6 @@ enum Route: Hashable {
     case RANK
     case COLLECT
     case COIN
+    case SEARCH
+    case SEARCH_RESULT(key:String)
 }

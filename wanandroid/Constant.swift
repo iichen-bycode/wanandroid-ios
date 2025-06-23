@@ -15,5 +15,6 @@ class Constant {
     static let USERINFO = "\(BASE_URL)/user/lg/userinfo/json"
     static let WECHAT_AUTHORS = "\(BASE_URL)/wxarticle/chapters/json"
     static let PROJECT_CATEGORY = "\(BASE_URL)/project/tree/json"
+    static let SEARCH_HOT_KEY = "\(BASE_URL)/hotkey/json"
 }
 
